@@ -7,8 +7,8 @@
 cat sda.dump |sfdisk /dev/sda
 loadkeys es
 timedatectl set-ntp true
-mkfs.ext4 /dev/sda
-mount /dev/sdX1 /mnt
+mkfs.ext4 /dev/sda1
+mount /dev/sda1 /mnt
 pacstrap /mnt base linux linux-firmware networkmanager grub
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
