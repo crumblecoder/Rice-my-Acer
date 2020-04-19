@@ -3,6 +3,7 @@
 #pacman -Sy
 #pacman -S git
 #git clone https://github.com/crumblecoder/Rice-my-Acer/
+#mount -o remount,size=2G /run/archiso/cowspace
 
 sfdisk -f /dev/sda < sda.dump
 loadkeys es
@@ -11,7 +12,7 @@ mkfs.ext4 /dev/sda1
 mount /dev/sda1 /mnt
 pacstrap /mnt base linux linux-firmware networkmanager grub
 genfstab -U /mnt >> /mnt/etc/fstab
-arch-chroot /mnt
+arch-chroot /mnt /bin/bash <<EOF
 ln -sf /usr/share/zoneinfo/Europe/Madrid /etc/localtime
 hwclock --systohc
 sed -i  '/^#es_ES.*  /s/^#//'  /etc/locale.gen
@@ -21,5 +22,13 @@ echo "ACER-PC" >/etc/hostname
 echo "127.0.0.1	localhost" > /etc/hosts
 echo "::1		localhost"    >> /etc/hosts
 echo "127.0.1.1	ACER-PC"  >> /etc/hosts
+grub-install /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+
+
 passwd
+EOF
+
+
+
 
