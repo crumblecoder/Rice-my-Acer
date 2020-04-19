@@ -2,6 +2,6 @@ label: dos
 label-id: 0xa705b3bc
 device: /dev/sda
 unit: sectors
-sector-size: 512
+
 
 /dev/sda1 : start=        2048, size=   937701040, type=83, bootable
