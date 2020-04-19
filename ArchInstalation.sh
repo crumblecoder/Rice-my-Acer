@@ -10,6 +10,8 @@ loadkeys es
 timedatectl set-ntp true
 mkfs.ext4 /dev/sda1
 mount /dev/sda1 /mnt
+pacman -S reflector
+reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 pacstrap /mnt base linux linux-firmware networkmanager grub
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt /bin/bash <<EOF
