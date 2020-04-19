@@ -1,10 +1,10 @@
-#!/bin/bash
+#!/bin/bash -vx
 
 #pacman -Sy
 #pacman -S git
 #git clone https://github.com/crumblecoder/Rice-my-Acer/
 
-cat sda.dump |sfdisk /dev/sda
+sfdisk -f /dev/sda < sda.dump
 loadkeys es
 timedatectl set-ntp true
 mkfs.ext4 /dev/sda1
