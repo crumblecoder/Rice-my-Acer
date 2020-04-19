@@ -27,6 +27,6 @@ grub-mkconfig -o /boot/grub/grub.cfg
 systemctl enable NetworkManager
 
 EOF
-
+cp ./afterfirstboot.sh /mnt/root
 umount -r /mnt
 
