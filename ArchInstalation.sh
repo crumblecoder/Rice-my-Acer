@@ -12,7 +12,7 @@ mkfs.ext4 /dev/sda1
 mount /dev/sda1 /mnt
 pacman -S reflector
 reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
-pacstrap /mnt base linux linux-firmware networkmanager grub git sudo
+pacstrap /mnt base linux linux-firmware networkmanager grub git sudo nvim
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt /bin/bash <<EOF
 ln -sf /usr/share/zoneinfo/Europe/Madrid /etc/localtime
