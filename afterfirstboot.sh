@@ -8,4 +8,4 @@ su $(ls /home/) <<EOF
 makepkg -si
 exit
 EOF
-pacman -S alacritty  bspwm  sxhkd lemonbar xorg-xinit xorg
+pacman -S alacritty  bspwm  sxhkd  xorg-xinit xorg
