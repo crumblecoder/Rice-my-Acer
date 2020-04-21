@@ -5,7 +5,7 @@ pacman -Sy
 su $(ls /home/) <<EOF
 cd ~
 git clone https://aur.archlinux.org/yay.git
-sudo cd yay
+cd yay
 makepkg -si
 exit
 EOF
