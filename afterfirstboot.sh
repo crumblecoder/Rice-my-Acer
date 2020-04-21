@@ -3,6 +3,7 @@ useradd -m -g wheel -s /bin/bash $(read -p "Escriba el nombre de usuario:" ;echo
 sed -i '/# %wheel ALL=(ALL) ALL/s/^# //' /etc/sudoers
 pacman -Sy
 su $(ls /home/) <<EOF
+cd ~
 git clone https://aur.archlinux.org/yay.git
 sudo cd yay
 makepkg -si
