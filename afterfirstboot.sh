@@ -4,7 +4,7 @@ sed -i '/# %wheel ALL=(ALL) ALL/s/^# //' /etc/sudoers
 pacman -Sy
 git clone https://aur.archlinux.org/yay.git
 su $(ls /home/) <<EOF
-cd yay
+sudo cd yay
 makepkg -si
 exit
 EOF
