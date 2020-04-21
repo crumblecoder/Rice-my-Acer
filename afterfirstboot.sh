@@ -9,3 +9,4 @@ makepkg -si
 exit
 EOF
 pacman -S alacritty  bspwm  sxhkd  xorg-xinit xorg
+yay -S lemonbar
