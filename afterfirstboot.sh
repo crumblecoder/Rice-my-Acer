@@ -12,7 +12,7 @@ cd ~
 
 
 echo "sxhkd &" >  .xinitrc
-exec "bspwm"  >> .xinitrc
+echo "bspwm"  >> .xinitrc
 mkdir ~/.config/bspwm/
 mkdir ~/.config/sxhkd/
 cp /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/
