@@ -3,6 +3,7 @@
 #sed -i '/# %wheel ALL=(ALL) ALL/s/^# //' /etc/sudoers
 #pacman -Sy
 #pacman -S alacritty  bspwm  sxhkd  xorg-xinit xorg go
+cp ./00-keyboard.conf /etc/X11/xorg.conf.d/
 su $(ls /home/) << EOF
 cd ~
 #git clone https://aur.archlinux.org/yay.git
