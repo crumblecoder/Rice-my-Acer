@@ -11,7 +11,7 @@ cd ~
 #yay -S lemonbar
 
 
-echo "sxhkd &">  .xinitrc
+echo "sxhkd &" >  .xinitrc
 exec "bspwm"  >> .xinitrc
 mkdir ~/.config/bspwm/
 mkdir ~/.config/sxhkd/
