@@ -3,7 +3,7 @@
 #sed -i '/# %wheel ALL=(ALL) ALL/s/^# //' /etc/sudoers
 #pacman -Sy
 #pacman -S alacritty  bspwm  sxhkd  xorg-xinit xorg go
-su $(ls /home/) <<EOF
+su $(ls /home/) << EOF
 cd ~
 #git clone https://aur.archlinux.org/yay.git
 #cd yay
