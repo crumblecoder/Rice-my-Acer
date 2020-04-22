@@ -17,4 +17,5 @@ mkdir ~/.config/bspwm/
 mkdir ~/.config/sxhkd/
 cp /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/
 cp /usr/share/doc/bspwm/examples/bspwmrc mkdir ~/.config/bspwm/
+sed -i 's/urxvt/alacritty/'  ~/.config/sxhkdrc 
 EOF
