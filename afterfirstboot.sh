@@ -9,7 +9,7 @@ cd ~
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
-yes | yay -S polybar
+{echo 1;yes;}| yay -S polybar
 cd ~
 echo "sxhkd &" >  .xinitrc
 echo "bspwm"  >> .xinitrc
