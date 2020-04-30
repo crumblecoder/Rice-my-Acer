@@ -9,8 +9,9 @@ cd ~
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si --noconfirm
-{ echo 1 ; yes ; } | yay -S polybar
 cd ~
+{ echo 1 ; yes ; } | yay -S polybar
+{ echo 1 ; yes ; } | yay -S brave-bin
 echo "sxhkd &" >  .xinitrc
 echo "bspwm"  >> .xinitrc
 mkdir -p ~/.config/bspwm/
