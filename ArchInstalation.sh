@@ -14,6 +14,7 @@ pacman -S reflector
 reflector --verbose --latest 5 --sort rate --save /etc/pacman.d/mirrorlist
 pacstrap /mnt base linux linux-firmware networkmanager grub git base-devel neovim
 genfstab -U /mnt >> /mnt/etc/fstab
+cp /etc/zsh/zshrc /mnt/etc/zsh/zshrc
 arch-chroot /mnt /bin/bash <<EOF
 ln -sf /usr/share/zoneinfo/Europe/Madrid /etc/localtime
 hwclock --systohc
@@ -33,4 +34,5 @@ cp ./afterfirstboot.sh /mnt/root
 cp ./00-keyboard.conf /mnt/root
 cp /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
 umount -r /mnt
+
 
