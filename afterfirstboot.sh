@@ -20,5 +20,10 @@ cp /usr/share/doc/bspwm/examples/sxhkdrc ~/.config/sxhkd/
 cp /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/
 sed -i 's/urxvt/alacritty/'  ~/.config/sxhkd/sxhkdrc
 chsh -s /bin/zsh
-echo -e 'if systemctl -q is-active graphical.target && [[ ! :0 && 1 -eq 1 ]]; then ''\n'' ''\t'' exec startx''\n''fi' >> /home/kikeco/.zprofile
+echo -e 'if systemctl -q is-active graphical.target && [[ ! :0 && 1 -eq 1 ]]; then ''\n'' ''\t'' exec startx''\n''fi' >> ~/.zprofile
 EOF
+
+
+
+
+
