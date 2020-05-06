@@ -23,7 +23,6 @@ chsh -s /bin/zsh
 echo -e 'if systemctl -q is-active graphical.target && [[ ! :0 && 1 -eq 1 ]]; then ''\n'' ''\t'' exec startx''\n''fi' >> ~/.zprofile
 EOF
 
-
-
-
-
+#copy content of bspwm
+#Call polybar in bspwmrc
+#Add Super + b for browser 
