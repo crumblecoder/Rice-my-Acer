@@ -26,3 +26,5 @@ EOF
 #copy content of bspwm
 #Call polybar in bspwmrc
 #Add Super + b for browser 
+#Install picom to terminal transparent
+#sudo pacman -S virt-viewer
