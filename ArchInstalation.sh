@@ -34,5 +34,6 @@ cp ./afterfirstboot.sh /mnt/root
 cp ./00-keyboard.conf /mnt/root
 cp /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
 umount -r /mnt
-
-
+#Paquetes para Chromecast
+#libmicrodns
+#protobuf 
